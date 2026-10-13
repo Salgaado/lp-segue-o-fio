@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Segue o fio: escândalos nos governos do PT</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap">
+<style>
+body{margin:0;background:#F2F0EB}
+a{color:#151515;text-decoration-color:#B3261E;text-underline-offset:3px}
+a:hover{color:#B3261E}
+.entry{display:flex;flex-wrap:wrap;gap:24px 48px;padding:48px 0;border-top:2px solid #151515}
+.meta{flex:1 1 180px;display:flex;flex-direction:column;gap:8px}
+.body{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.num{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.08em;color:#4A4A4A}
+.year{font-family:'Big Shoulders Display','Arial Narrow',sans-serif;font-weight:800;font-size:64px;line-height:.9}
+.h{font-family:'Big Shoulders Display','Arial Narrow',sans-serif;font-weight:800;font-size:40px;line-height:1;margin:0;text-transform:uppercase}
+.p{font-size:19px;line-height:1.55;margin:0;max-width:68ch}
+.fact{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;padding:16px 20px;background:#151515;color:#F2F0EB}
+.fig{font-family:'Big Shoulders Display','Arial Narrow',sans-serif;font-weight:800;font-size:44px;line-height:1}
+.cap{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;line-height:1.5;max-width:52ch}
+.out{font-size:17px;line-height:1.5;margin:0;padding:12px 0 0;border-top:1px dashed #9C978C}
+.lbl{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.src{display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:14px;line-height:1.45}
+.tag{align-self:flex-start;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border:1px solid #151515}
+.body>.lula{order:1}.body>.fact{order:2}.body>.out{order:3}.body>.src{order:4}
+.lula{display:flex;flex-direction:column;gap:14px;padding:24px 28px;background:#151515;color:#F2F0EB;border-top:8px solid #B3261E}
+.lula::before{content:"Lula e o PT neste caso";font-family:'Big Shoulders Display','Arial Narrow',sans-serif;font-weight:800;font-size:38px;line-height:1;text-transform:uppercase;color:#FFFFFF}
+.lula .badge{border:2px solid #F2F0EB !important}
+.nm{font-weight:700;color:inherit;text-decoration:underline;text-decoration-color:#B3261E;text-decoration-thickness:3px;text-underline-offset:4px}
+.pt{font-weight:700;background:#B3261E;color:#FFFFFF;padding:0 .25em}
+.badge{align-self:flex-start;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:6px 10px}
+.lt{margin:0;font-size:18px;line-height:1.6}
+@media (max-width:640px){.year{font-size:48px}.h{font-size:32px}.p{font-size:17px}}
+</style>
+</helmet>
+<div style="font-family: 'Source Serif 4', Georgia, serif; color: #151515; background: #F2F0EB">
+
+<header style="background: #151515; color: #F2F0EB; padding: 64px 24px 72px">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: .12em; text-transform: uppercase">
+<span style="font-weight: 500; padding-bottom: 4px; border-bottom: 3px solid {{accent}}">Dossiê / Segue o fio</span>
+<span>Linha do tempo com fontes · 2005–2025</span>
+</div>
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 800; font-size: clamp(56px, 9vw, 128px); line-height: .88; text-transform: uppercase">Vinte anos de escândalos nos governos do <span style="background: #F2F0EB; color: #151515; padding: 0 .12em">PT</span>, <span style="background: {{accent}}; color: #FFFFFF; padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone">um por um.</span></h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.5; max-width: 60ch; color: #DCD8CF">Do Mensalão à fraude no INSS: o que a Polícia Federal, o Ministério Público, o TCU e a imprensa apuraram, com o link da reportagem, o desfecho de cada investigação e o papel de Lula em cada caso.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center">
+<span class="badge" style="background: {{accent}}; color: #FFFFFF">Lula · direto</span><span style="font-size: 17px; color: #DCD8CF">2 casos em que <strong class="nm">Lula</strong> foi réu</span>
+<span class="badge" style="border: 2px solid #F2F0EB">Lula · indireto</span><span style="font-size: 17px; color: #DCD8CF">13 casos ligados aos governos do <strong class="pt">PT</strong>, a ministros de <strong class="nm">Lula</strong> ou a parentes dele</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 48px; padding-top: 24px; border-top: 1px solid #4A4A4A">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 56px; line-height: 1">15</span><span class="lbl" style="color: #DCD8CF">casos documentados</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 56px; line-height: 1">20</span><span class="lbl" style="color: #DCD8CF">anos de linha do tempo</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 56px; line-height: 1">44</span><span class="lbl" style="color: #DCD8CF">reportagens citadas</span></div>
+</div>
+<a href="#fio" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; background: {{accent}}; color: #FFFFFF; text-decoration: none; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500">Seguir o fio
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5"></path></svg></a>
+</div>
+</header>
+
+<main id="fio" style="max-width: 1120px; margin: 0 auto; padding: 64px 24px 24px">
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 01 / 15</span><span class="year">2005</span><span class="tag">Congresso · STF</span></div>
+<div class="body">
+<h2 class="h">Mensalão</h2>
+<p class="p">Denunciado pelo então deputado Roberto Jefferson, o esquema pagava parlamentares para apoiar o governo no Congresso. A Procuradoria-Geral apontou José Dirceu, José Genoino, Delúbio Soares e Silvio Pereira como o núcleo central. O STF aceitou a denúncia contra 40 suspeitos em 2007 e julgou o caso em 2012.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">25 condenados</span><span class="cap">de 37 réus. José Dirceu recebeu 10 anos e 10 meses; Marcos Valério, mais de 40 anos.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">O esquema funcionou no primeiro mandato de <strong class="nm">Lula</strong>, e o apontado como chefe era o ministro-chefe da Casa Civil dele, José Dirceu, cardeal do <strong class="pt">PT</strong>, ao lado do então presidente do partido, José Genoino, e do tesoureiro Delúbio Soares. Lula não foi denunciado pela Procuradoria nem julgado na ação.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Condenações no maior julgamento da história do STF até então. Dirceu sempre se declarou inocente e chamou o julgamento de político.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/noticia/75228/veja-as-penas-dos-reus-do-mensalao">Congresso em Foco: Veja as penas dos réus do mensalão</a>
+<a href="https://exame.com/brasil/mensalao-stf-julga-o-destino-de-jose-dirceu-e-genoino/amp">Exame: José Dirceu é condenado pelo STF</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 02 / 15</span><span class="year">2007</span><span class="tag">Polícia Federal</span></div>
+<div class="body">
+<h2 class="h">Operação Navalha</h2>
+<p class="p">A PF desmontou um esquema da construtora Gautama que fraudava licitações de obras públicas em nove estados e no Distrito Federal, com desvios em ministérios e no Dnit. A PF afirmou que o ministro de Minas e Energia, Silas Rondeau, recebeu propina ligada ao programa Luz para Todos. Ele negou e deixou o cargo na semana seguinte.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">46 presos</span><span class="cap">entre empresários, prefeitos, um ex-governador e um assessor do ministro. Prejuízo estimado pela PF: R$ 100 milhões em um ano.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Atingiu o Ministério de Minas e Energia do governo <strong class="nm">Lula</strong>, comandado por Silas Rondeau. Lula não foi investigado.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O processo foi fatiado entre varas de cinco estados e se arrastou por anos, com risco de impunidade apontado pela própria imprensa.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.gazetadopovo.com.br/vida-publica/entenda-a-operacao-navalha-da-pf-ahcndrlzmmwpzirxflcsjtl5a/">Gazeta do Povo: Entenda a Operação Navalha, da PF</a>
+<a href="https://www.camara.leg.br/noticias/128354-TRABALHO-ARQUIVA-FISCALIZACAO-DE-CONTRATOS-ENTRE-PF-E-GAUTAMA">Agência Câmara: prejuízo de R$ 100 milhões calculado pela PF</a>
+<a href="https://www.congressoemfoco.com.br/noticia/105219/entenda-o-que-e-a-operacao-navalha">Congresso em Foco: Entenda o que é a Operação Navalha</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 03 / 15</span><span class="year">2008</span><span class="tag">CGU · MPF</span></div>
+<div class="body">
+<h2 class="h">Farra dos cartões corporativos</h2>
+<p class="p">A ministra da Igualdade Racial, Matilde Ribeiro, foi a recordista de gastos com o cartão do governo em 2007, a maior parte com aluguel de carros e até compras em loja de free shop. Pressionada por Lula, pediu demissão em fevereiro de 2008. Outros ministros também foram questionados pelo uso do cartão.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 171 mil</span><span class="cap">gastos no cartão corporativo em um único ano. A CGU apontou R$ 22 mil sem justificativa suficiente.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Matilde Ribeiro era ministra de <strong class="nm">Lula</strong>, que, segundo a imprensa da época, disse a ela que não era possível mantê-la no cargo. Lula não foi investigado.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O MPF entrou com ação de improbidade administrativa pedindo a devolução dos valores.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/noticia/3787/cartao-corporativo-matilde-ribeiro-renuncia-ao-cargo">Congresso em Foco: Matilde Ribeiro renuncia ao cargo</a>
+<a href="https://www.congressoemfoco.com.br/noticia/90217/mpf-denuncia-matilde-ribeiro-por-uso-de-corporativos">Congresso em Foco: MPF denuncia Matilde Ribeiro</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 04 / 15</span><span class="year">2010</span><span class="tag">Casa Civil</span></div>
+<div class="body">
+<h2 class="h">Caso Erenice Guerra</h2>
+<p class="p">Sucessora de Dilma Rousseff na Casa Civil, Erenice Guerra caiu em meio a denúncias de que seus filhos faziam lobby dentro do ministério, cobrando comissão para destravar contratos nos Correios e crédito no BNDES. A PF abriu inquérito para investigar tráfico de influência.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">16/09/2010</span><span class="cap">dia em que a ministra-chefe da Casa Civil pediu demissão, a semanas da eleição presidencial.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Erenice era a ministra-chefe da Casa Civil de <strong class="nm">Lula</strong>. Segundo a Folha, foi Lula quem mandou o recado de que a situação dela ficara insustentável. Lula não foi investigado.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>A Comissão de Ética da Presidência aplicou censura. Erenice negou as acusações e as atribuiu à disputa eleitoral.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://sul21.com.br/?p=129267">Sul21: Erenice Guerra deixa a chefia da Casa Civil</a>
+<a href="https://www.congressoemfoco.com.br/noticia/76905/pf-vai-investigar-denuncia-de-lobby-na-casa-civil">Congresso em Foco: PF vai investigar denúncia de lobby na Casa Civil</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 05 / 15</span><span class="year">2011</span><span class="tag">Ministérios</span></div>
+<div class="body">
+<h2 class="h">A “faxina” de Dilma</h2>
+<p class="p">No primeiro ano de governo, ministros caíram um atrás do outro: Antonio Palocci (Casa Civil), pelo salto no patrimônio; Alfredo Nascimento (Transportes), por propina e superfaturamento no Dnit; Wagner Rossi (Agricultura), por irregularidades na Conab; Pedro Novais (Turismo), por uso de verba pública; Orlando Silva (Esporte), por desvio para o partido; e Carlos Lupi (Trabalho), por tráfico de influência.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">6 ministros</span><span class="cap">derrubados por denúncias em menos de um ano. A maioria já estava no governo Lula.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Aconteceu no governo Dilma, do <strong class="pt">PT</strong>, não no de <strong class="nm">Lula</strong>. Mas, com exceção de Pedro Novais, todos os ministros derrubados já faziam parte do governo Lula, e boa parte das acusações era sobre aquele período.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Todos negaram as acusações. Dilma rejeitou o rótulo de “faxina” dado pela imprensa.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.jb.com.br/pais/noticias/2011/12/21/amp/retrospectiva-2011-politica-queda-de-ministros-e-impunidade-em-brasilia.html">Jornal do Brasil: Retrospectiva 2011, queda de ministros</a>
+<a href="https://www.congressoemfoco.com.br/coluna/60770/a-historia-de-uma-crise-em-capitulos">Congresso em Foco: A história de uma crise em capítulos</a>
+<a href="https://www.opendemocracy.net/en/brazil-womans-work-vs-mens-mess/">openDemocracy: ministros nomeados ainda no governo Lula</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 06 / 15</span><span class="year">2012</span><span class="tag">Polícia Federal · MPF</span></div>
+<div class="body">
+<h2 class="h">Operação Porto Seguro</h2>
+<p class="p">A PF revelou um grupo que vendia pareceres técnicos de órgãos federais a empresas, com diretores indicados para a ANA e a Anac. Entre os alvos estavam a chefe do gabinete da Presidência em São Paulo, Rosemary Noronha, e o número dois da AGU. O caso começou com a denúncia de um servidor do TCU que recebeu oferta de R$ 300 mil por um parecer.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">18 indiciados</span><span class="cap">por corrupção, tráfico de influência e falsidade ideológica. Dilma exonerou todos os servidores envolvidos.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Rosemary Noronha chefiava o escritório da Presidência em São Paulo. Questionado pela Folha, <strong class="nm">Lula</strong> disse apenas que a investigação não o surpreendeu e se recusou a explicar a frase. Ele não foi investigado.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>A procuradora do caso afirmou que não havia registro de telefonemas entre Rosemary e Lula.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://exame.com/brasil/pf-faz-apreensao-no-escritorio-da-presidencia-em-sp">Exame: PF faz apreensão no escritório da Presidência em SP</a>
+<a href="https://www.conjur.com.br/?p=503018">Conjur: Dilma demite braço direito da AGU após operação da PF</a>
+<a href="https://sul21.com.br/?p=109228">Sul21: procuradora diz que Lula não está envolvido</a>
+<a href="https://www.congressoemfoco.com.br/noticia/63112/jornais-pf-finaliza-caso-de-ex-assessora-em-prazo-incomum">Congresso em Foco: “Não fiquei surpreso”, afirma Lula sobre a PF</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 07 / 15</span><span class="year">2006–2014</span><span class="tag">Petrobras · TCU</span></div>
+<div class="body">
+<h2 class="h">Refinaria de Pasadena</h2>
+<p class="p">Em 2006, a Petrobras pagou US$ 360 milhões por metade de uma refinaria no Texas que a belga Astra havia comprado inteira por US$ 42,5 milhões dois anos antes. Por cláusulas do contrato, a estatal foi obrigada a ficar com tudo, e o custo final passou de US$ 1,18 bilhão. Delatores da Lava Jato relataram pagamento de propina no negócio.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">US$ 792 mi</span><span class="cap">de dano aos cofres públicos, segundo o TCU. Em 2019, a refinaria foi vendida por US$ 467 milhões.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">A compra foi aprovada em 2006, no governo <strong class="nm">Lula</strong>, pelo conselho da Petrobras presidido por Dilma Rousseff, então ministra dele. Lula não foi investigado no caso.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O TCU responsabilizou ex-diretores da Petrobras e, em 2021, isentou Dilma Rousseff, que presidia o conselho da estatal na época.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/amp/noticia/49994/tcujulgamentocomprapasadena">Congresso em Foco: TCU responsabiliza diretores por Pasadena</a>
+<a href="https://www.poder360.com.br/brasil/tcu-inocenta-dilma-por-prejuizos-da-petrobras-com-compra-de-pasadena/">Poder360: TCU inocenta Dilma por prejuízos com Pasadena</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 08 / 15</span><span class="year">2014</span><span class="tag">Lava Jato</span></div>
+<div class="body">
+<h2 class="h">Petrolão</h2>
+<p class="p">A Lava Jato revelou um cartel de empreiteiras que pagava propina a diretores da Petrobras e a partidos em troca de contratos superfaturados. No balanço de 2014, a própria estatal reconheceu as perdas com corrupção e registrou seu primeiro prejuízo anual desde 1991.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 6,2 bi</span><span class="cap">em desvios reconhecidos pela Petrobras, referentes a contratos de 2004 a 2012. Prejuízo total em 2014: R$ 21,6 bilhões.</span></div>
+<div class="lula"><span class="badge" style="background: {{accent}}; color: #FFFFFF">Lula · envolvimento direto</span><p class="lt"><strong class="nm">Lula</strong> foi réu na Lava Jato, condenado nos casos do tríplex do Guarujá e do sítio de Atibaia, e ficou 580 dias preso. Em 2021, o STF anulou as condenações por entender que Curitiba não era competente e que Sergio Moro foi parcial. Na Justiça do DF, a nova denúncia do sítio foi rejeitada e o caso do tríplex foi arquivado por prescrição em 2022. Lula não tem condenação válida e sempre negou os crimes.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Parte das decisões da Lava Jato foi depois anulada pelo STF. Para a Folha, mesmo com os excessos da operação, a corrupção investigada foi real.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/noticias/petrobras-perde-r-62-bilhoes-com-corrupcao/">Congresso em Foco: Petrobras perde R$ 6,2 bilhões com corrupção</a>
+<a href="https://www.jb.com.br/economia/noticias/2015/04/22/amp/petrobras-balanco-auditado-aponta-prejuizo-de-r-216-bilhoes-em-2014.html">Jornal do Brasil: balanço aponta prejuízo de R$ 21,6 bilhões</a>
+<a href="https://www.migalhas.com.br/quentes/347494/stf-moro-foi-parcial-ao-condenar-lula">Migalhas: STF decide que Moro foi parcial ao condenar Lula</a>
+<a href="https://www.poder360.com.br/justica/justica-arquiva-caso-do-triplex-contra-lula/">Poder360: Justiça arquiva caso do tríplex contra Lula</a>
+<a href="https://www.poder360.com.br/justica/justica-do-df-volta-a-negar-denuncia-contra-lula-no-caso-do-sitio-de-atibaia/">Poder360: Justiça do DF rejeita denúncia do sítio de Atibaia</a>
+<a href="https://brasilagro.com.br/conteudo/corrupcao-investigada-pela-lava-jato-foi-real-editorial-folha-de-spaulo.html">Editorial da Folha: corrupção investigada pela Lava Jato foi real</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 09 / 15</span><span class="year">2015</span><span class="tag">Receita · Polícia Federal</span></div>
+<div class="body">
+<h2 class="h">Operação Zelotes</h2>
+<p class="p">Dentro do Carf, tribunal administrativo do Ministério da Fazenda, conselheiros recebiam propina de empresas para reduzir ou zerar multas aplicadas pela Receita. Fases seguintes investigaram também a suposta compra de medidas provisórias com incentivos fiscais para montadoras.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 19 bi</span><span class="cap">em julgamentos sob suspeita entre 2005 e 2015. Prejuízo já comprovado na época: cerca de R$ 6 bilhões.</span></div>
+<div class="lula"><span class="badge" style="background: {{accent}}; color: #FFFFFF">Lula · envolvimento direto</span><p class="lt">Em 2016, <strong class="nm">Lula</strong> e o filho Luís Cláudio viraram réus num desdobramento da Zelotes, acusados de tráfico de influência na compra dos caças Gripen e na MP 627, quando Lula já era ex-presidente. Segundo o MPF, a empresa do filho recebeu cerca de R$ 2,5 milhões de lobistas. O ministro Ricardo Lewandowski, do STF, suspendeu a ação ao ver indícios de que os procuradores agiram combinados com a Lava Jato de Curitiba. A defesa nega qualquer participação.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O esquema envolvia grandes empresas privadas e conselheiros do Carf, não só agentes do governo. Vários processos ainda tramitaram por anos.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.gazetadopovo.com.br/vida-publica/entenda-o-que-sao-operacao-zelotes-e-carf-182pqyvcycf69ler6ebkvu8m6">Gazeta do Povo: Entenda o que são a Operação Zelotes e o Carf</a>
+<a href="https://sul21.com.br/?p=72048">Sul21: nova fase da Operação Zelotes</a>
+<a href="https://congressoemfoco.com.br/noticias/justica-aceita-denuncia-contra-lula-e-filho-na-zelotes">Congresso em Foco: Justiça aceita denúncia contra Lula e filho na Zelotes</a>
+<a href="https://www.gazetasp.com.br/brasil/ricardo-lewandowski-do-stf-suspende-acao-contra-lula/">Gazeta SP: Lewandowski suspende ação contra Lula</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 10 / 15</span><span class="year">2015</span><span class="tag">TCU · Congresso</span></div>
+<div class="body">
+<h2 class="h">Pedaladas fiscais</h2>
+<p class="p">O governo atrasou repasses do Tesouro à Caixa e ao Banco do Brasil, que tiveram de bancar programas sociais com dinheiro próprio. Na prática, a manobra maquiava o resultado das contas públicas. O TCU rejeitou as contas de 2014, algo que não acontecia desde o governo Getúlio Vargas, em 1937.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">8 a 0</span><span class="cap">placar unânime do TCU contra as contas de Dilma. As pedaladas viraram a base do impeachment de 2016.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">As pedaladas que levaram ao impeachment foram do governo Dilma, do <strong class="pt">PT</strong>, sucessora escolhida por <strong class="nm">Lula</strong>. Segundo o Aos Fatos, a prática já existia antes, mas Dilma pedalou 35 vezes mais do que Lula e FHC somados.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Dilma perdeu o mandato. Anos depois, o TRF-1 manteve arquivada, sem analisar o mérito, uma ação sobre o tema, o que não equivale a absolvição, segundo o Aos Fatos.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/noticias/por-unanimidade-tcu-recomenda-ao-congresso-rejeicao-das-contas-de-dilma/">Congresso em Foco: TCU recomenda rejeição das contas de Dilma</a>
+<a href="https://www.aosfatos.org/noticias/lula-engana-ao-dizer-dilma-foi-absolvida-pedaladas/">Aos Fatos: Dilma não foi absolvida no caso das pedaladas</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 11 / 15</span><span class="year">2016</span><span class="tag">Fundos de pensão</span></div>
+<div class="body">
+<h2 class="h">Operação Greenfield</h2>
+<p class="p">A operação investigou investimentos temerários ou fraudulentos dos maiores fundos de pensão de estatais: Previ (Banco do Brasil), Petros (Petrobras), Funcef (Caixa) e Postalis (Correios). Os prejuízos acabaram cobertos, em parte, com contribuições extras de aposentados e funcionários.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 8 bi</span><span class="cap">de prejuízo suspeito nos fundos, segundo os investigadores. A CPI dos Fundos de Pensão indiciou 353 pessoas.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Os investimentos investigados foram feitos durante os governos do <strong class="pt">PT</strong>, em fundos de estatais. Entre os alvos estava o ex-tesoureiro do partido João Vaccari Neto. <strong class="nm">Lula</strong> não foi alvo da operação.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Ex-gestores contestam a operação e afirmam que vários investimentos questionados deram lucro.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.congressoemfoco.com.br/noticia/36990/leo-pinheiro-e-vaccari-sao-alvos-de-operacao-sobre-fundos-de-pensao">Congresso em Foco: operação mira fundos de pensão</a>
+<a href="https://monitormercantil.com.br/fundos-de-pensao-tiveram-deficit-acumulado-de-r-29-2-bi-em-2018/">Monitor Mercantil: CPI indiciou 353 pessoas</a>
+<a href="https://congressoemfoco.com.br/area/justica/a-operacao-greenfield-e-a-tentativa-de-destruir-biografias-limpas">Congresso em Foco: artigo de ex-gestores contra a operação</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 12 / 15</span><span class="year">2016</span><span class="tag">Lava Jato · SP</span></div>
+<div class="body">
+<h2 class="h">Operação Custo Brasil</h2>
+<p class="p">Desdobramento da Lava Jato em São Paulo, investigou propina paga a partir da gestão de empréstimos consignados de servidores federais, no âmbito do Ministério do Planejamento. O ex-ministro Paulo Bernardo, ministro de Lula e de Dilma, foi preso, e a PF fez buscas na sede nacional do PT.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 100 mi</span><span class="cap">desviados entre 2010 e 2015, segundo a PF. Paulo Bernardo foi acusado de receber R$ 7,1 milhões.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Paulo Bernardo foi ministro do Planejamento de <strong class="nm">Lula</strong>, e o esquema começou em 2010, último ano do governo Lula. A PF fez buscas na sede nacional do <strong class="pt">PT</strong> e prendeu o ex-tesoureiro do partido Paulo Ferreira. Lula não foi investigado.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O STF revogou a prisão poucos dias depois. Paulo Bernardo negou ter recebido dinheiro e o PT chamou a operação de midiática.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.tribunapr.com.br/noticias/politica/pf-indicia-ex-ministro-paulo-bernardo-por-organizacao-criminosa-e-corrupcao/">Tribuna PR: PF indicia Paulo Bernardo</a>
+<a href="https://jornaldaparaiba.com.br/_/48100">Jornal da Paraíba: Toffoli revoga a prisão de Paulo Bernardo</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 13 / 15</span><span class="year">2017</span><span class="tag">BNDES</span></div>
+<div class="body">
+<h2 class="h">Operação Bullish</h2>
+<p class="p">A PF investigou os aportes bilionários do BNDES, por meio do BNDESPar, para a JBS comprar frigoríficos entre 2007 e 2011, nos governos Lula e Dilma. Um parecer do TCU, base da operação, concluiu que o banco favoreceu a empresa em detrimento do próprio caixa.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 1,2 bi</span><span class="cap">de prejuízo aos cofres públicos, segundo a PF. A denúncia do MPF falou em R$ 1,8 bilhão.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">A maior parte dos aportes à JBS saiu no governo <strong class="nm">Lula</strong>, e entre os denunciados está Guido Mantega, ministro da Fazenda dele. A operação também citou o ex-ministro Antonio Palocci. Lula não foi denunciado no caso.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Em 2019, a Justiça Federal aceitou denúncia contra o ex-ministro da Fazenda Guido Mantega e o ex-presidente do BNDES Luciano Coutinho. A JBS defende que os aportes seguiram regras de mercado.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.poder360.com.br/justica/operacao-da-pf-contra-fraudes-no-bndes-envolve-jbs-e-palocci/">Poder360: Operação da PF contra fraudes no BNDES envolve JBS</a>
+<a href="https://jornaldebrasilia.com.br/noticias/politica-e-poder/juiz-do-df-aceita-denuncia-contra-mantega-coutinho-e-mais-3-na-operacao-bullish/">Jornal de Brasília: Justiça aceita denúncia contra Mantega e Coutinho</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 14 / 15</span><span class="year">2025</span><span class="tag">PGR · STF</span></div>
+<div class="body">
+<h2 class="h">Codevasf e o ministro das Comunicações</h2>
+<p class="p">A PF concluiu que Juscelino Filho (União Brasil), ministro das Comunicações de Lula, integrou um grupo que desviou recursos de obras de pavimentação pagas com emendas que ele mesmo indicou quando era deputado. O dinheiro ia para a Codevasf e chegava à prefeitura comandada pela irmã dele.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 835 mil</span><span class="cap">desviados, segundo a denúncia da PGR ao STF. Primeiro ministro do atual governo Lula denunciado pela Procuradoria.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">Juscelino Filho foi nomeado ministro por <strong class="nm">Lula</strong>, que havia dito que o afastaria se ele fosse denunciado. As acusações se referem ao período em que ele era deputado, antes de entrar no governo.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>Juscelino deixou o ministério em abril de 2025 e se diz inocente. Cabe ao STF decidir se ele vira réu.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://www.band.com.br/noticias/juscelino-filho-ministro-de-lula-e-denunciado-pela-pgr-por-suspeita-de-desvio-de-emendas-202504081245">Band: Juscelino Filho é denunciado pela PGR</a>
+<a href="https://acionista.com.br/pgr-denuncia-juscelino-filho-ministro-das-comunicacoes-por-suspeita-de-desvio-em-emendas/">Acionista: PGR denuncia Juscelino Filho por desvio de R$ 835,8 mil</a>
+</div>
+</div>
+</article>
+
+<article class="entry">
+<div class="meta"><span class="num">Nº 15 / 15</span><span class="year">2025</span><span class="tag">INSS · PF · CGU</span></div>
+<div class="body">
+<h2 class="h">A fraude dos aposentados</h2>
+<p class="p">Associações e sindicatos usavam acordos com o INSS para descontar mensalidades direto dos benefícios, muitas vezes com assinaturas falsas e sem o aposentado saber. Na auditoria da CGU, a maioria dos 1.300 beneficiários entrevistados disse nunca ter autorizado o desconto. Segundo o Jornal Nacional, o ministro da Previdência foi alertado em 2023 e levou quase um ano para agir.</p>
+<div class="fact"><span class="fig" style="color: {{accent}}">R$ 6,3 bi</span><span class="cap">em descontos irregulares de 2019 a 2024, segundo a PF. Contando desde 2016, quase R$ 8 bilhões.</span></div>
+<div class="lula"><span class="badge" style="border: 2px solid #151515">Lula · envolvimento indireto</span><p class="lt">A fraude estourou no terceiro mandato de <strong class="nm">Lula</strong> e derrubou o presidente do INSS e o ministro da Previdência nomeados no governo dele. O irmão mais velho de <strong class="nm">Lula</strong>, Frei Chico, é vice-presidente do Sindnapi, uma das 11 entidades investigadas. Ele não está entre os investigados, nega irregularidades e processa quem o associa ao esquema. A CPMI do INSS rejeitou a convocação dele.</p></div>
+<p class="out"><span class="lbl" style="color: {{accent}}">Desfecho · </span>O presidente do INSS foi afastado e o ministro Carlos Lupi pediu demissão em maio de 2025. O esquema começou antes do atual governo, e a PF não apontou responsabilidade de Lupi.</p>
+<div class="src"><span class="lbl">Fontes</span>
+<a href="https://tribunademinas.com.br/noticias/politica/02-05-2025/lupi-inss.html?amp=1">Tribuna de Minas: Lupi pede demissão após escândalo no INSS</a>
+<a href="https://www.poder360.com.br/poder-governo/lupi-nega-ter-sido-omisso-em-fraude-no-inss/">Poder360: Lupi nega ter sido omisso em fraude no INSS</a>
+<a href="https://diariodonordeste.verdesmares.com.br/pontopoder/ministro-carlos-lupi-afirma-que-houve-demora-sobre-investigacao-na-fraude-bilionaria-do-inss-1.3645033">Diário do Nordeste: Lupi foi alertado em 2023</a>
+<a href="https://www.infomoney.com.br/politica/quem-e-frei-chico-irmao-de-lula-e-dirigente-de-sindicato-alvo-de-operacao-no-inss/">InfoMoney: Quem é Frei Chico, irmão de Lula e dirigente do Sindnapi</a>
+<a href="https://www.band.com.br/noticias/irmao-de-lula-entra-na-justica-contra-quem-o-associa-a-descontos-e-critica-cpmi-do-inss-202510201345">Band: Irmão de Lula entra na Justiça e critica CPMI do INSS</a>
+</div>
+</div>
+</article>
+
+</main>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 24px 24px 72px">
+<div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; border: 2px solid #151515; background: #FFFFFF">
+<span class="lbl" style="color: {{accent}}">Leia antes de compartilhar</span>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase">Investigação não é condenação</h2>
+<p class="p">Esta linha do tempo reúne casos apurados por órgãos oficiais e pela imprensa. Nem todos terminaram em condenação: alguns ainda tramitam, outros foram anulados ou arquivados, e vários envolveram aliados e empresas privadas, não apenas petistas. Em cada caso, o desfecho aparece ao lado da acusação, para que o leitor tire as próprias conclusões a partir das fontes. Envolvimento indireto significa que o caso ocorreu num governo do PT ou envolveu ministros nomeados por Lula ou parentes dele, não que ele tenha sido acusado.</p>
+</div>
+</section>
+
+<footer style="background: #151515; color: #DCD8CF; padding: 40px 24px">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; line-height: 1.6">
+<span>Levantamento com reportagens de Congresso em Foco, Poder360, Gazeta do Povo, Exame, Jornal do Brasil, Sul21, Aos Fatos, Migalhas e outros.</span>
+<span>Atualizado em outubro de 2026</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#B3261E","options":["#B3261E","#C2410C","#1D4ED8"]},"$preview":{"width":1280,"height":8200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#B3261E' };
+  }
+}
+</script>
+</body>
+</html>
